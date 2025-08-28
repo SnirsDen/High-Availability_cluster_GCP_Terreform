@@ -1,0 +1,8 @@
+# Terraform files
+terraform.tfstate*
+.terraform
+.terraform.lock*
+*.tfstate
+*.tfstate.*
+i.m.key*
+credential_GCP_git_ignor.json
