@@ -1,1 +1,1 @@
-project_id = "cryptic-heaven-462819-i6"
+project_id = "diplom-470819"

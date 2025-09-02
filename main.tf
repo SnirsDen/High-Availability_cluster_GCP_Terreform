@@ -1,15 +1,14 @@
 provider "google" {
   project = var.project_id
   region  = var.region
+  
 }
 
-# Генерация SSH ключа
 resource "tls_private_key" "ssh_key" {
   algorithm = "RSA"
   rsa_bits  = 4096
 }
 
-# Сохранение приватного ключа локально
 resource "local_file" "private_key" {
   content         = tls_private_key.ssh_key.private_key_openssh
   filename        = "${path.module}/terraform_gcp"
@@ -22,25 +21,23 @@ resource "local_file" "public_key" {
   filename = "${path.module}/terraform_gcp.pub"
 }
 
-# Создаем 2 виртуальные машины в europe-west4 (prod)
 resource "google_compute_instance" "prod_vms" {
   count        = 2
-  name         = "prod-instance-${count.index + 1}"
-  machine_type = "e2-small"
+  name         = "prod-${count.index + 1}"
+  machine_type = "e2-standard-2"
   zone         = element(var.prod_zones, count.index)
   tags         = ["http-server", "prod"]
 
   boot_disk {
     initialize_params {
       image = "ubuntu-os-cloud/ubuntu-2204-lts"
-      size  = 20
+      size  = 35
     }
   }
 
   network_interface {
     network = "default"
     access_config {
-      # Ephemeral public IP
     }
   }
 
@@ -50,25 +47,23 @@ resource "google_compute_instance" "prod_vms" {
   }
 }
 
-# Создаем 2 виртуальные машины в europe-west3 (dev)
 resource "google_compute_instance" "dev_vms" {
   count        = 2
-  name         = "dev-instance-${count.index + 1}"
-  machine_type = "e2-micro"
+  name         = "dev-${count.index + 1}"
+  machine_type = "e2-small"
   zone         = element(var.dev_zones, count.index)
   tags         = ["http-server", "dev"]
 
   boot_disk {
     initialize_params {
       image = "ubuntu-os-cloud/ubuntu-2204-lts"
-      size  = 20
+      size  = 15
     }
   }
 
   network_interface {
     network = "default"
     access_config {
-      # Ephemeral public IP
     }
   }
 
@@ -78,11 +73,10 @@ resource "google_compute_instance" "dev_vms" {
   }
 }
 
-# Создаем виртуальную машину для мониторинга
 resource "google_compute_instance" "monitoring_vm" {
-  name         = "monitoring-instance"
+  name         = "monitoring"
   machine_type = "e2-medium"
-  zone         = var.prod_zones[0]
+  zone         = "europe-west4-c"
   tags         = ["monitoring", "http-server", "https-server"]
 
   boot_disk {
@@ -95,7 +89,6 @@ resource "google_compute_instance" "monitoring_vm" {
   network_interface {
     network = "default"
     access_config {
-      # Ephemeral public IP
     }
   }
 
@@ -107,7 +100,11 @@ resource "google_compute_instance" "monitoring_vm" {
       dev_vm_1_ip       = google_compute_instance.dev_vms[0].network_interface.0.network_ip
       dev_vm_2_ip       = google_compute_instance.dev_vms[1].network_interface.0.network_ip
       dashboard_content = filebase64("${path.module}/monitoring/my-dashboard.json")
-    })
+    })}
+
+  timeouts {
+    create = "20m" 
+    update = "20m"
   }
 
   # Копируем файл дашборда через provisioner
@@ -120,7 +117,7 @@ resource "google_compute_instance" "monitoring_vm" {
       user        = "ubuntu"
       private_key = tls_private_key.ssh_key.private_key_openssh
       host        = self.network_interface[0].access_config[0].nat_ip
-      timeout     = "10m"
+      timeout     = "20m"
     }
   }
 
@@ -137,12 +134,11 @@ resource "google_compute_instance" "monitoring_vm" {
       user        = "ubuntu"
       private_key = tls_private_key.ssh_key.private_key_openssh
       host        = self.network_interface[0].access_config[0].nat_ip
-      timeout     = "10m"
+      timeout     = "20m"
     }
   }
 }
 
-# Правило firewall для SSH
 resource "google_compute_firewall" "ssh" {
   name    = "allow-ssh"
   network = "default"
@@ -156,7 +152,6 @@ resource "google_compute_firewall" "ssh" {
   target_tags   = ["monitoring", "prod", "dev"]
 }
 
-# Правило firewall для Grafana (порт 3000)
 resource "google_compute_firewall" "grafana" {
   name    = "allow-grafana"
   network = "default"
@@ -170,7 +165,6 @@ resource "google_compute_firewall" "grafana" {
   target_tags   = ["monitoring"]
 }
 
-# Правило firewall для Prometheus (порт 9090)
 resource "google_compute_firewall" "prometheus" {
   name    = "allow-prometheus"
   network = "default"
@@ -184,7 +178,6 @@ resource "google_compute_firewall" "prometheus" {
   target_tags   = ["monitoring"]
 }
 
-# Правило firewall для Node Exporter (порт 9100)
 resource "google_compute_firewall" "node_exporter" {
   name    = "allow-node-exporter"
   network = "default"
@@ -269,7 +262,6 @@ resource "google_compute_backend_service" "dev_backend" {
   }
 }
 
-# (europe-west4)
 resource "google_compute_instance_group" "prod_groups" {
   count = 2
   name  = "prod-instance-group-${count.index + 1}"
@@ -283,7 +275,6 @@ resource "google_compute_instance_group" "prod_groups" {
   }
 }
 
-# (europe-west3)
 resource "google_compute_instance_group" "dev_groups" {
   count = 2
   name  = "dev-instance-group-${count.index + 1}"
@@ -297,13 +288,11 @@ resource "google_compute_instance_group" "dev_groups" {
   }
 }
 
-# Создаем URL map для PROD
 resource "google_compute_url_map" "prod_url_map" {
   name            = "prod-load-balancer"
   default_service = google_compute_backend_service.prod_backend.id
 }
 
-# Создаем URL map для DEV
 resource "google_compute_url_map" "dev_url_map" {
   name            = "dev-load-balancer"
   default_service = google_compute_backend_service.dev_backend.id

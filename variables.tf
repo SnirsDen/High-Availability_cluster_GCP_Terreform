@@ -1,5 +1,5 @@
 variable "project_id" {
-  description = "cryptic-heaven-462819-i6"
+  description = "diplom-470819"
   type        = string
 }
 
