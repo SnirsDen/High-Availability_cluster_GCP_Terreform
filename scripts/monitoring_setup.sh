@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Получаем IP адреса из переменных
 PROD_VM_1_IP=${prod_vm_1_ip}
 PROD_VM_2_IP=${prod_vm_2_ip}
 DEV_VM_1_IP=${dev_vm_1_ip}
@@ -10,15 +9,12 @@ echo "Starting monitoring setup..."
 echo "Production VMs: $PROD_VM_1_IP, $PROD_VM_2_IP"
 echo "Development VMs: $DEV_VM_1_IP, $DEV_VM_2_IP"
 
-# Создаем директории
 sudo mkdir -p /opt/monitoring/dashboards
 sudo chown ubuntu:ubuntu /opt/monitoring/dashboards
 
-# Настройка SSH
 mkdir -p /home/ubuntu/.ssh
 chmod 700 /home/ubuntu/.ssh
 
-# Установка Docker
 echo "Installing Docker..."
 apt-get update
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common
@@ -27,16 +23,13 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io
 
-# Установка Docker Compose
 echo "Installing Docker Compose..."
 curl -L "https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-# Создаем директорию для конфигурации мониторинга
 mkdir -p /opt/monitoring
 cd /opt/monitoring
 
-# Создаем конфигурационный файл Prometheus
 cat > prometheus.yml << EOF
 global:
   scrape_interval: 15s
@@ -62,7 +55,6 @@ scrape_configs:
 
 EOF
 
-# Создаем docker-compose.yml
 echo "Creating Docker Compose configuration..."
 cat > docker-compose.yml << 'EOF'
 version: '3'
@@ -104,23 +96,14 @@ volumes:
   grafana_data:
 EOF
 
-# Запускаем контейнеры
-echo "Starting Docker containers..."
 /usr/local/bin/docker-compose up -d
 
-# Установка jq для парсинга JSON
 apt-get install -y jq
 
-# Выводим информацию о targets
 echo "Detailed targets status:"
-sleep 10  # Даем время Prometheus запуститься
+sleep 10  
 curl -s http://localhost:9090/api/v1/targets | jq '.data.activeTargets[] | {scrapeUrl: .scrapeUrl, health: .health, lastError: .lastError}'
 
-# Ждем немного перед настройкой Grafana
-echo "Waiting for services to start..."
-sleep 30
-
-# Настраиваем источник данных Prometheus в Grafana
 echo "Configuring Grafana data source..."
 until curl -s -f http://localhost:3000 > /dev/null; do
   echo "Waiting for Grafana to be ready..."
@@ -138,7 +121,6 @@ curl -X POST "http://localhost:3000/api/datasources" \
     "isDefault":true
   }'
 
-# Декодируем и сохраняем дашборд, если предоставлена переменная dashboard_content
 if [ -n "${dashboard_content}" ]; then
     echo "Got dashboard content from variable, saving to file..."
     echo ${dashboard_content} | base64 -d > /opt/monitoring/dashboards/my-dashboard.json
@@ -147,12 +129,11 @@ if [ -n "${dashboard_content}" ]; then
     echo "Importing custom dashboard..."
     DASHBOARD_JSON=$(cat /opt/monitoring/dashboards/my-dashboard.json)
     
-    # Получаем UID источника данных Prometheus
     datasource_uid=$(curl -s "http://localhost:3000/api/datasources/name/Prometheus" \
         -u admin:admin | grep -o '"uid":"[^"]*' | cut -d'"' -f4)
     
     if [ ! -z "$datasource_uid" ]; then
-        # Заменяем переменные в дашборде - экранируем DS_PROMETHEUS для Terraform
+        
         DASHBOARD_JSON=$(echo "$DASHBOARD_JSON" | sed "s/\\\$${DS_PROMETHEUS}/$datasource_uid/g")
     fi
     
@@ -165,7 +146,7 @@ if [ -n "${dashboard_content}" ]; then
             \"folderId\": 0
         }"
 else
-    # Создаем простой дашборд по умолчанию
+    
     echo "Creating default dashboard..."
     cat > /opt/monitoring/dashboards/default-dashboard.json << 'EOF'
 {

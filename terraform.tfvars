@@ -1,1 +1,1 @@
-project_id = "diplom-470819"
+project_id = "my-diplom-472008"

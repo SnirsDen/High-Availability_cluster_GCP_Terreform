@@ -1,20 +1,20 @@
 variable "project_id" {
-  description = "diplom-470819"
+  description = "project id GCP"
   type        = string
 }
 
 variable "region" {
   description = "Основной регион GCP"
   type        = string
-  default     = "europe-west4"
+  default     = "europe-west2"
 }
 
 variable "prod_zones" {
-  description = "Зоны для PROD (europe-west4)"
+  description = "Зоны для PROD (europe-west2)"
   type        = list(string)
   default = [
-    "europe-west4-a",
-    "europe-west4-b"
+    "europe-west2-a",
+    "europe-west2-b"
   ]
 }
 
