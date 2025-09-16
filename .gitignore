@@ -6,3 +6,4 @@ terraform.tfstate*
 terraform_gcp
 terraform_gcp.pub
 credential_GCP.json
+credentials.xml
