@@ -22,7 +22,7 @@ variable "dev_zones" {
   description = "Зоны для DEV (europe-west3)"
   type        = list(string)
   default = [
-    "europe-west3-a",
+    "europe-west3-c",
     "europe-west3-b"
   ]
 }

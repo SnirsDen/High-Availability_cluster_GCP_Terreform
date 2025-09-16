@@ -1,0 +1,715 @@
+Started by an SCM change
+Obtained Jenkinsfile from git https://github.com/SnirsDen/HTML_test
+Resume disabled by user, switching to high-performance, low-durability mode.
+[8mha:////4IrYld2qW1MWEomeXJ3+/wS+77EbQPAx3qiF+bQEmiZ2AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4LGelQYFhdhvZuH1dznjD07h7TJiL/iknvb/fb06d/LgAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4EyD6qZT6gx4L8xUPEafLYkr6oOI+dexkBxPJsPf0oi4AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/lib/jenkins/workspace/website-update
+[8mha:////4DshN/kGI+Yd/wiayitK65SvCJ0RDse656SEdkRlkSt9AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4Fm0f7QnTIVBM7E47ltTyfdpzw9io1BWYztsaf7Z3u4/AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4JNE3NBVmWsU2KFzusGQTZTuGoXf6FXdGu5jrzR4jOkdAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4CQ/x+4Lur2bvXmyuNGOwX2tEZYSIj5sK0z2nlhCOn3SAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/SnirsDen/HTML_test
+ > git init /var/lib/jenkins/workspace/website-update # timeout=10
+Fetching upstream changes from https://github.com/SnirsDen/HTML_test
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/SnirsDen/HTML_test +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/SnirsDen/HTML_test # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 07fa8ef0cb21f4b85f62147a3a8b75224add070d (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 07fa8ef0cb21f4b85f62147a3a8b75224add070d # timeout=10
+Commit message: "test1"
+ > git rev-list --no-walk 611f79d7a9a9746e669eef7696b278640de92e8a # timeout=10
+[8mha:////4D5OJrui4NayhB2V8clIV/8ZQeEtCcb3AGmfFVFGE3fSAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4JemspOLwqK+0jTlIdxBkwVbHYw2Ge/Yj7Bd/yoY7yxKAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4KzUdTOhLMcBmIJGQAHKi0FgnqOuscg9jcpvTt+b56olAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4HvlDGvA9dqE8F0fSp3boVeplqkg5eHM4ABzJBZRzuLlAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4C2GYQ89iQaG2E3cve2ERF2vv78bm+F/EsFK0HyaJtUDAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4CcRZZQb6rqwF7W4giLpWRNcbvZeW04uHpko9tFmbXhTAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Клонирование репозитория)
+[8mha:////4GHJksjXLMWyAQwKXGJn9UMqmjNxy7yx+Fvtvdg2JhqvAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] sh
++ git clone https://github.com/SnirsDen/HTML_test.git
+Cloning into 'HTML_test'...
+[8mha:////4PrgX/i4+0Ko51EpNApFEoEoVbYSPtSASwTtM28asoGgAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N7BnLt++AAAA[0m[Pipeline] }
+[8mha:////4Hz3A+5Sx1VAdohhroFOo0G5JEdSjx9A7MReVMvKsNA/AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N4glvS6+AAAA[0m[Pipeline] // stage
+[8mha:////4EsyO3LBM6l5do5TdGoKnx4LoMfUgkq39UCNnVyl+tmhAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUnRgQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9ANydZ8vCAAAA[0m[Pipeline] stage
+[8mha:////4PHGfQQWFZMwrYGB63Y7zPIarP68OnjtkuDXCDV/UoyQAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] { (Сборка и запуск Docker контейнера)
+[8mha:////4Ahhum0ehBg+V1wP9ammm/yhNndsOPonscJB+6qFdqZgAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] script
+[8mha:////4PGwE9J7DldnwSAIiImlPgBdbaqFHQ/HI9ARppxbhl1qAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogU2BDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrN7xWSV3CAAAA[0m[Pipeline] {
+[8mha:////4MGK9vvyjhdwyuZqapqS0S38UzyZ2klDL7DwcQHhmQJNAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICtIgqreWGF5jYGCfWnbEdkooX8TX+QCASFVusdraZ5wuWKcKRo8XWUOcoNQ6D7+20cODYXTwP2PIZG6bE3qA0g2Rt6hklZwNzihIWAlaGGs/Jkc2wFq26q8orstUpx+k7CCidvsEDCjGZs4r5C2OEzbXXienn+SuAMWQo99tP7cIbaOP4NL4AAAA=[0m[Pipeline] sh
++ docker run -d -p 80:80 -v ./HTML_test:/usr/share/nginx/html --name nginx-container nginx:latest
+1def2932154053e164da0c41318fbf604e521a1b9a493e9d0a99a6d27f49cead
+[8mha:////4L+J3tNajwG+4Cg4fHG0Effq4E9HiYMYRm+2Q6bHsYFkAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJu8TlHX9qf0b7E/nQb4AAAA=[0m[Pipeline] }
+[8mha:////4FTWkdNMp1OUhfolZK1Qyyc434YuDwr8Nj/MiqoQtY2KAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdPtf28AEud0rYvgAAAA==[0m[Pipeline] // script
+[8mha:////4LpZsLO7nDCITwoigvDnAQ6m5I4ij+hvLGweejklJtGpAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEAUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwAAHdIsr4AAAA=[0m[Pipeline] }
+[8mha:////4AU1/si70x3QXo7whBh7Ra0xscg32Xpgvw96FpDYNVALAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIikBAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwANLmr6b4AAAA=[0m[Pipeline] // stage
+[8mha:////4H4Fi/QzKzoO7WE+aIxIk89EHkR5dK93Q5+16qzMzsCCAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZWBBTF2jLpwgNCEkjf4vSUo6cSKuxh0IVGLCg2Vbst7zBVXwcCSvmVU4GAy9YaObdE4skR8ujhKzdGY9YSCnWKdSR1K1S+0oKlhUlLDisFbYOwoGdYQNt+IuaidQ16fo83bgUBp5gwcUPJOj8PFbZg/b6yQD4Y/zFwDzGKFsmmy7/edZvQHkVNMxwgAAAA==[0m[Pipeline] stage
+[8mha:////4PY/uIlRXmpGY6jcgXv+NsGXPzVTH0/3NC3sbxljGFcMAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYoABMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAyQCqkwgAAAA==[0m[Pipeline] { (Проверка)
+[8mha:////4Ce2S2D9vIDeRtz0CE/zE5Q5RCiWmuKzL2it4M9GH0rXAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0YCEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAGvZp0gvgAAAA==[0m[Pipeline] sh
++ curl http://localhost
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достопримечательности Беларуси ЕУУУ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to right, #1a3d7a, #2a5a9e);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .map-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .map-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .region {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .region:hover {
+            transform: translateY(-5px);
+        }
+        
+        .region-header {
+            background: linear-gradient(to right, #2a5a9e, #3b6eb6);
+            color: white;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .region-icon {
+            font-size: 2.5rem;
+        }
+        
+        .region-title {
+            font-size: 1.8rem;
+        }
+        
+        .attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 25px;
+        }
+        
+        .attraction {
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .attraction:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .attraction-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 4px solid #2a5a9e;
+        }
+        
+        .attraction-content {
+            padding: 20px;
+        }
+        
+        .attraction-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #1a3d7a;
+        }
+        
+        .attraction-description {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .attraction-location {
+            display: flex;
+            align-items: center;
+            color: #2a5a9e;
+            font-weight: 500;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 20px;
+            background: #1a3d7a;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 1000px) {
+            .attractions {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Достопримечательности Беларуси</h1>
+        <p>Откройте для себя культурное и историческое наследие каждой области</p>
+    </header>
+    
+    <div class="intro">
+        <p>Беларусь - страна с богатой историей, уникальной культурой и удивительной природой. На этой странице вы найдете лучшие достопримечательности каждой из областей Беларуси, которые стоит посетить каждому туристу.</p>
+    </div>
+    
+    <div class="map-container">
+        <h2>Области Беларуси</h2>
+        <img src="images/Беларусь.jpg" alt="Карта областей Беларуси" width="700">
+    </div>
+    
+    <!-- Минская область -->
+    <div class="region">
+        <div class="region-header">
+            <div class="region-icon">🏰</div>
+            <h2 class="region-title">Минская область</h2>
+        </div>
+        <div class="attractions">
+            <div class="attraction">
+                <img src="images/Несвижский замок.jpg" alt="Несвижский замок" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Несвижский замок</h3>
+                    <p class="attraction-description">Величественный дворцово-замковый комплекс XVI-XVIII веков, бывшая резиденция князей Радзивиллов. Объект Всемирного наследия ЮНЕСКО с роскошными интерьерами и живописным парком.</p>
+                    <p class="attraction-location">📍 Несвиж</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/хатынь.jpg" alt="Мемориальный комплекс Хатынь" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Хатынь</h3>
+                    <p class="attraction-description">Трагический мемориал на месте деревни, уничтоженной фашистами в 1943 году. Символ памяти о жертвах нацизма в Беларуси с пронзительной скульптурой "Непокорённый человек".</p>
+                    <p class="attraction-location">📍 Логойский район</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Дудудки.jpg" alt="Музейный комплекс Дудутки" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Дудутки</h3>
+                    <p class="attraction-description">Этнографический музей под открытым небом, воссоздающий жизнь белорусской деревни XIX века. Здесь можно увидеть старинные ремёсла, попробовать традиционные блюда и прокатиться на лошадях.</p>
+                    <p class="attraction-location">📍 Дудчицы</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Брестская область -->
+    <div class="region">
+        <div class="region-header">
+            <div class="region-icon">🛡️</div>
+            <h2 class="region-title">Брестская область</h2>
+        </div>
+        <div class="attractions">
+            <div class="attraction">
+                <img src="images/Брестская крепость.jpg" alt="Брестская крепость" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Брестская крепость</h3>
+                    <p class="attraction-description">Легендарная крепость-герой, символ мужества советских солдат в годы Великой Отечественной войны. Мемориальный комплекс включает руины, монументы и музей обороны.</p>
+                    <p class="attraction-location">📍 Брест</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/беловежская пуща.jpg" alt="Беловежская пуща" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Беловежская пуща</h3>
+                    <p class="attraction-description">Древний реликтовый лес, включённый в список Всемирного наследия ЮНЕСКО. Здесь обитают зубры, можно увидеть вековые дубы и сосны. На территории находится резиденция белорусского Деда Мороза.</p>
+                    <p class="attraction-location">📍 Каменецкий район</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Дворец Пусловских.jpg" alt="Дворец Пусловских" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Дворец Пусловских</h3>
+                    <p class="attraction-description">Великолепный неоготический дворец XIX века, известный как "Коссовский замок". За сказочный вид его часто называют "рыцарской грезой". Сейчас ведутся реставрационные работы.</p>
+                    <p class="attraction-location">📍 Коссово</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Витебская область -->
+    <div class="region">
+        <div class="region-header">
+            <div class="region-icon">🎨</div>
+            <h2 class="region-title">Витебская область</h2>
+        </div>
+        <div class="attractions">
+            <div class="attraction">
+                <img src="images/софийский собор.jpg" alt="Софийский собор в Полоцке" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Софийский собор</h3>
+                    <p class="attraction-description">Один из самых древних храмов Восточной Европы, построенный в XI веке. Современное здание в стиле виленского барокко хранит фрагменты первоначальной кладки. В соборе находится музей и концертный зал.</p>
+                    <p class="attraction-location">📍 Полоцк</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Шагал.jpg" alt="Дом-музей Марка Шагала" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Дом-музей Марка Шагала</h3>
+                    <p class="attraction-description">Музей в доме, где провёл детство и юность всемирно известный художник Марк Шагал. Экспозиция включает личные вещи, документы и репродукции картин мастера.</p>
+                    <p class="attraction-location">📍 Витебск</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/браславские озера.jpg" alt="Браславские озёра" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Браславские озёра</h3>
+                    <p class="attraction-description">Национальный парк с уникальным озёрным краем, который называют "белорусской Швейцарией". Более 30 озёр соединены между собой протоками, создавая идеальные условия для водного туризма и отдыха.</p>
+                    <p class="attraction-location">📍 Браслав</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Гомельская область -->
+    <div class="region">
+        <div class="region-header">
+            <div class="region-icon">🏛️</div>
+            <h2 class="region-title">Гомельская область</h2>
+        </div>
+        <div class="attractions">
+            <div class="attraction">
+                <img src="images/Гомельский дворцово-парковый ансамбль.jpg" alt="Гомельский дворцово-парковый ансамбль" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Дворцово-парковый ансамбль</h3>
+                    <p class="attraction-description">Великолепный архитектурный комплекс XVIII-XIX веков, бывшая резиденция Румянцевых и Паскевичей. Включает дворец, часовню-усыпальницу, зимний сад и прекрасный парк на берегу реки Сож.</p>
+                    <p class="attraction-location">📍 Гомель</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Музей старообрядчества.jpg" alt="Ветковский музей старообрядчества" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Музей старообрядчества</h3>
+                    <p class="attraction-description">Уникальный музей в городе Ветка, где сохранились традиции старообрядцев. В коллекции - старопечатные книги, иконы, рукописи и предметы быта XVII-XIX веков.</p>
+                    <p class="attraction-location">📍 Ветка</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Мозырьский замок.jpg" alt="Мозырский замок" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Мозырский замок</h3>
+                    <p class="attraction-description">Реконструированная деревянная крепость на Замковой горе, воссоздающая облик средневекового Мозыря. В комплекс входят башни, частокол, хозяйственные постройки и экспозиция по истории города.</p>
+                    <p class="attraction-location">📍 Мозырь</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Гродненская область -->
+    <div class="region">
+        <div class="region-header">
+            <div class="region-icon">⛪</div>
+            <h2 class="region-title">Гродненская область</h2>
+        </div>
+        <div class="attractions">
+            <div class="attraction">
+                <img src="images/Старый замок.jpg" alt="Старый замок в Гродно" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Старый замок</h3>
+                    <p class="attraction-description">Древняя крепость XI-XIX веков, бывшая резиденция великих князей литовских и королей польских. Сейчас здесь расположен историко-археологический музей с богатой коллекцией экспонатов.</p>
+                    <p class="attraction-location">📍 Гродно</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Августовский канал.jpg" alt="Августовский канал" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Августовский канал</h3>
+                    <p class="attraction-description">Уникальное гидротехническое сооружение XIX века, соединяющее реки Вислу и Неман. Популярное место для водных прогулок, велосипедных маршрутов и отдыха на природе.</p>
+                    <p class="attraction-location">📍 Гродненский район</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Коложская церковь.jpg" alt="Коложская церковь" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Коложская церковь</h3>
+                    <p class="attraction-description">Один из древнейших православных храмов Восточной Европы (XII век). Уникальность церкви - в её архитектуре с вмурованными в стены керамическими кувшинами для улучшения акустики.</p>
+                    <p class="attraction-location">📍 Гродно</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Могилёвская область -->
+    <div class="region">
+        <div class="region-header">
+            <div class="region-icon">🕍</div>
+            <h2 class="region-title">Могилёвская область</h2>
+        </div>
+        <div class="attractions">
+            <div class="attraction">
+                <img src="images/Могилёвская ратуша.jpg" alt="Могилёвская ратуша" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Могилёвская ратуша</h3>
+                    <p class="attraction-description">Восстановленное здание городской ратуши XVII века, символ Могилёва. Со смотровой площадки на башне открывается великолепный вид на город и реку Днепр.</p>
+                    <p class="attraction-location">📍 Могилёв</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Буйничское поле.jpg" alt="Буйничское поле" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Буйничское поле</h3>
+                    <p class="attraction-description">Мемориаль100 22208  100 22208    0     0  15.0M      0 --:--:-- --:--:-- --:--:-- 21.1M
+ный комплекс на месте героической обороны Могилёва в 1941 году. Центр композиции - часовня с мемориальными досками и аллеей героев. Здесь же находится камень Константина Симонова.</p>
+                    <p class="attraction-location">📍 Могилёв</p>
+                </div>
+            </div>
+            
+            <div class="attraction">
+                <img src="images/Дворец Потемкина.jpg" alt="Дворец Потемкина" class="attraction-img">
+                <div class="attraction-content">
+                    <h3 class="attraction-title">Дворец Потемкина</h3>
+                    <p class="attraction-description">Архитектурный памятник классицизма конца XVIII века, построенный для князя Потёмкина-Таврического. Сейчас в отреставрированном здании размещается исторический музей.</p>
+                    <p class="attraction-location">📍 Кричев</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Достопримечательности Беларуси | Страна с богатой историей и культурным наследием</p>
+        <p>Откройте для себя красоту и уникальность каждой области Беларуси!</p>
+        <p>Разработан и внедрен при поддержке Kseniya Production</p>
+    </footer>
+</body>
+</html>
+[8mha:////4FnVGe6wbsHpMIZ1EcxOvqjrjLk6QOfUMQF4F0Xi0TORAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0SCEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQGMKkS1vgAAAA==[0m[Pipeline] }
+[8mha:////4MUgr1zv/WvTUfrDgIY4c/NNb4Kc52VP/3HMf3UiGUTOAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCQKJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw9mQDtDvgAAAA==[0m[Pipeline] // stage
+[8mha:////4O9xZNo/4BJuCuwiJlhnQ4p2qf4jXYsJe+i2WzadZv2+AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUESNiYo2ycIKQhJA2+r8kKe3EibgadyBQiQkPlm3Jes8XNCnCgaJjncXeY9KeDWF0JbGJYn8JNLGOzkwTJgqWSTtJMva4VEnZwqKqhpWAtUUdKHl0GTaiU3fVBoWuPeVYtr2A2psbPKAShZxVzN8yR9heR5MIf5y/AJiHDDXnxXb882ze6G+hisIAAAA=[0m[Pipeline] stage
+[8mha:////4Dk+RUK/XraHLBYObfIBXmrMmnMER2wu5M8A7oMBXSY2AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+2YMO4MIAAAA=[0m[Pipeline] { (Получение списка IP-адресов)
+[8mha:////4NbSHxjV0hqwKEuLtDe9k4cZ9Z/xENH9r8Edg0V0zpQ6AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohUoiNiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsPfTawssIAAAA=[0m[Pipeline] script
+[8mha:////4O9Me0Fa2GPyF+8HdGoq7488ZTxGLe7Dj3ft4EjfZRrKAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KBtiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPBdk7bsIAAAA=[0m[Pipeline] {
+[8mha:////4BZx+pryQXtzx1SZzmYrW21m9LuAhn0SFWaZvgI162G/AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ACbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASMfXIzCAAAA[0m[Pipeline] withCredentials
+Masking supported pattern matches of $GC_KEY
+[8mha:////4JyeGwrvnXsrEgjClNK8j/topP2jvL0PoPylPFm914fuAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QLAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD02yRsvCAAAA[0m[Pipeline] {
+[8mha:////4OGnfxpys+xAfymKrdNkqAH25v/mtAsYc0P/b1QMa34VAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIEGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAF9GxrMvgAAAA==[0m[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [GC_KEY]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ gcloud auth activate-service-account --key-file=****
+Activated service account credentials for: [service-account@my-diplom-472008.iam.gserviceaccount.com]
++ gcloud config set project my-diplom-472008 --quiet
+WARNING: [service-account@my-diplom-472008.iam.gserviceaccount.com] does not have permission to access projects instance [my-diplom-472008] (or it may not exist): Cloud Resource Manager API has not been used in project 516906653916 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. This command is authenticated as service-account@my-diplom-472008.iam.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    activationUrl: https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916
+    consumer: projects/516906653916
+    containerInfo: '516906653916'
+    service: cloudresourcemanager.googleapis.com
+    serviceTitle: Cloud Resource Manager API
+  reason: SERVICE_DISABLED
+- '@type': type.googleapis.com/google.rpc.LocalizedMessage
+  locale: en-US
+  message: Cloud Resource Manager API has not been used in project 516906653916 before
+    or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916
+    then retry. If you enabled this API recently, wait a few minutes for the action
+    to propagate to our systems and retry.
+- '@type': type.googleapis.com/google.rpc.Help
+  links:
+  - description: Google developers console API activation
+    url: https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916
+Updated property [core/project].
+[8mha:////4KpFGHTC4HO6/rH/eMD8OGOl5MluPGpDjyn/82XR8AX2AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSICEkRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q2yB4JLvgAAAA==[0m[Pipeline] sh
++ gcloud compute instances list --filter=name~'^prod.*' OR name~'^dev.*' --format=value(networkInterfaces[0].accessConfigs[0].natIP) --quiet
+[8mha:////4HjGn1CI57Obl7SMVJk44eaXjBN/BWRxJ8y/POD+gB1yAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSICEhRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q3zNplSvgAAAA==[0m[Pipeline] echo
+IP Addresses: [Ljava.lang.String;@51002b81
+[8mha:////4FEKWoiq9RoQ5Hs4O9qovCHIhWwF4scMqODoRTGm/OIEAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBKJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw+pT4efvgAAAA==[0m[Pipeline] }
+[8mha:////4DnyJOQT45n7OfUOcJdxYSLX4EfBVXNyNuHmOlzHh4vcAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AG2zdLNvgAAAA==[0m[Pipeline] // withCredentials
+[8mha:////4EcxTlcSM8iZImA83UTlbhYTZp18ub0XNnDvz7TgCRhwAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQTpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BGW9z3WoP46PQTy+AAAA[0m[Pipeline] }
+[8mha:////4B0Hmthb7wPUz0vWdYyV9fktfBgiIwOr5K9DUjFaavbzAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIpQoeoaC03vMAkxtix7ox9Ial4EV/jD1hEomKL1c4283rDOic4UrLCGxwc5s6JGEZblpgoDddAk/B0ER1hpmCEMpOi3pwWVMQGllQ1rCRsDHaBskPLsJVeP3QTNNrmzKl8Bwm16+/whEoWM+vEX5gT7G5jnwl/nr8CmGNkqPdtqbb9AIjJeWm+AAAA[0m[Pipeline] // script
+[8mha:////4PFtbxPkdho67mKPy59yDzkXbk4nVNAcwtOG/qjRXP/SAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQTpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BGVd5zrsP6bJewO+AAAA[0m[Pipeline] }
+[8mha:////4PjMeceRPE6P/Rs5qRBmedaqOGv+haIPyQZp+bjDhHYPAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Iddu+wG5Sy5RvgAAAA==[0m[Pipeline] // stage
+[8mha:////4Cw6SkzBvIkHP5UCaZDcOGsz0/KEmAcQjw8gVUX1DvGhAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUlRALYuoadeEEoQkhafR/SVLSiRNxNe5AoBITHizbkvWeL6iChyN5zazCwWDoDRvdpHNiifxwcZSYpTPrCQM5xTqVOpKqXWpHUcGiooQVh7XC3lEwqCNsuBV3UTuBuj5Fn7cDh9LIGzyg4JkchY/fMnvYXicZCH+cvwCYxwhl02Tb7T/P6g3eYQNSwgAAAA==[0m[Pipeline] stage
+[8mha:////4CBNclDG99gjMUROF8afjDrHG59aRbTfZwqjJdTpfpO0AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QTAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD+jQxyjCAAAA[0m[Pipeline] { (Копирование файлов на удаленные сервера)
+[8mha:////4Jq+rDxVFerXExFRAltcL8BibLb3x1m2J45prF1hvA+sAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QQIJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD9vR8YwgAAAA==[0m[Pipeline] script
+[8mha:////4IwLJw26MvLQOaPXsh6lNPknnGo+1QlrkMU+GIUUxCnuAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YQAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD56au0DCAAAA[0m[Pipeline] {
+[8mha:////4MXhGTDrLEuI/e2B7K09CmsyRd4r66eNKZ1QPCMdKAQ7AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUAQaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0iH00AwgAAAA==[0m[Pipeline] withCredentials
+Masking supported pattern matches of $GC_KEY
+[8mha:////4LF4AV7IMMZzyqSTfjQnlkzwVdmCluSAfNxkonA7MCMoAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUBibE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAW2++SvCAAAA[0m[Pipeline] {
+[8mha:////4EWv1S56xoz0szxu+60fqYELcDj1bctibGN6W3i/gQonAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIikKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN4OkKLa+AAAA[0m[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [GC_KEY]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ gcloud auth activate-service-account --key-file=****
+Activated service account credentials for: [service-account@my-diplom-472008.iam.gserviceaccount.com]
++ gcloud config set project my-diplom-472008 --quiet
+WARNING: [service-account@my-diplom-472008.iam.gserviceaccount.com] does not have permission to access projects instance [my-diplom-472008] (or it may not exist): Cloud Resource Manager API has not been used in project 516906653916 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. This command is authenticated as service-account@my-diplom-472008.iam.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    activationUrl: https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916
+    consumer: projects/516906653916
+    containerInfo: '516906653916'
+    service: cloudresourcemanager.googleapis.com
+    serviceTitle: Cloud Resource Manager API
+  reason: SERVICE_DISABLED
+- '@type': type.googleapis.com/google.rpc.LocalizedMessage
+  locale: en-US
+  message: Cloud Resource Manager API has not been used in project 516906653916 before
+    or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916
+    then retry. If you enabled this API recently, wait a few minutes for the action
+    to propagate to our systems and retry.
+- '@type': type.googleapis.com/google.rpc.Help
+  links:
+  - description: Google developers console API activation
+    url: https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=516906653916
+Updated property [core/project].
+[8mha:////4CyReOQA4SNO7LWjaGNL7fqXUR7gNOfQF5C7/G2+pFU8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN8KVM6++AAAA[0m[Pipeline] sh
++ gcloud compute instances list --filter=name~'^prod.*' OR name~'^dev.*' --format=value(networkInterfaces[0].accessConfigs[0].natIP) --quiet
+[8mha:////4E2iDSzn9+Okc0a4lq4SYlrpVtL+jo4iwQf6HG+3xDD5AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFNwUDcuC+AAAA[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@35.242.160.163 mkdir -p /tmp/HTML_test
+[8mha:////4IW/XT9/TbD8NAL+qq3+v3VCgQcGN4qUqYOtnX7qW9EEAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiilSIitZKwwtMYowd686xHZyKF/E1/kAgEhVbrHa2mecL1jHAkYNGq6g3FFuD3o16Xpg59FfHGS1fsGWK7BQ2KjfcqdOCDScFS4oSVgI2ilrH0ZBOsBVW3mXlJOnqnML8HQSUphvgAYWYzUmG9IUpwO42dpHp5/krgMknKOv9p2r/BkQyafm+AAAA[0m[Pipeline] sh
++ scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp -r ./HTML_test/Jenkinsfile ./HTML_test/images ./HTML_test/index.html ubuntu@35.242.160.163:/tmp/HTML_test/
+[8mha:////4K/WosdCvv5z+CU7qvGRmRWJasln7YZoVQcjhKS49awzAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCmgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO62n9qHN4dhRNK+AAAA[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@35.242.160.163 sudo rsync -av /tmp/HTML_test/ /var/www/html/
+sending incremental file list
+./
+Jenkinsfile
+index.html
+images/
+images/Августовский канал.jpg
+images/Беларусь.jpg
+images/Брестская крепость.jpg
+images/Буйничское поле.jpg
+images/Гомельский дворцово-парковый ансамбль.jpg
+images/Дворец Потемкина.jpg
+images/Дворец Пусловских.jpg
+images/Дудудки.jpg
+images/Коложская церковь.jpg
+images/Могилёвская ратуша.jpg
+images/Мозырский замок.jpg
+images/Мозырьский замок.jpg
+images/Музей старообрядчества.jpg
+images/Несвижский замок.jpg
+images/Старый замок.jpg
+images/Шагал.jpg
+images/беловежская пуща.jpg
+images/браславские озера.jpg
+images/софийский собор.jpg
+images/хатынь.jpg
+
+sent 6,528,707 bytes  received 449 bytes  4,352,770.67 bytes/sec
+total size is 6,525,196  speedup is 1.00
+[8mha:////4BJZ5VWUsWStWTPZX/K/tng1EwRM1JE0Q8f1mDMBDxfHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCkSBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAHGUF/LvgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@35.242.160.163 rm -rf /tmp/HTML_test
+[8mha:////4E3/scrQMKTybtOLDhjaJOiGCfGVxt74rNtLRQmffvZaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCiQkRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpS77af24Q0JTMdMvgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@35.197.226.12 mkdir -p /tmp/HTML_test
+[8mha:////4BmZhRjhcNDWnxrIX3x9S0ol6M51f/3myzZX553fvPZBAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCgqEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAFIfdxVvgAAAA==[0m[Pipeline] sh
++ scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp -r ./HTML_test/Jenkinsfile ./HTML_test/images ./HTML_test/index.html ubuntu@35.197.226.12:/tmp/HTML_test/
+[8mha:////4CpLTwzKXcCK9WfjmjZCrmFoKl7u+bOS8lbMKFLYWkFpAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBTQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKPe7XIft8AFYeFiGvgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@35.197.226.12 sudo rsync -av /tmp/HTML_test/ /var/www/html/
+sending incremental file list
+./
+Jenkinsfile
+index.html
+images/
+images/Августовский канал.jpg
+images/Беларусь.jpg
+images/Брестская крепость.jpg
+images/Буйничское поле.jpg
+images/Гомельский дворцово-парковый ансамбль.jpg
+images/Дворец Потемкина.jpg
+images/Дворец Пусловских.jpg
+images/Дудудки.jpg
+images/Коложская церковь.jpg
+images/Могилёвская ратуша.jpg
+images/Мозырский замок.jpg
+images/Мозырьский замок.jpg
+images/Музей старообрядчества.jpg
+images/Несвижский замок.jpg
+images/Старый замок.jpg
+images/Шагал.jpg
+images/беловежская пуща.jpg
+images/браславские озера.jpg
+images/софийский собор.jpg
+images/хатынь.jpg
+
+sent 6,528,698 bytes  received 449 bytes  13,058,294.00 bytes/sec
+total size is 6,525,196  speedup is 1.00
+[8mha:////4LtPIzWxCnGYj1DIZyw6cv7vD0hxDyFECsTENlh2fv3TAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKiFNAgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+Qbmvcx1q/wEZSUOfvgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@35.197.226.12 rm -rf /tmp/HTML_test
+[8mha:////4FyAoSH9eWjoJ3NurLBVW6OOmK+Icv+XHC71VGBdZzYiAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIikKBBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnf5jrshg/aGm60vgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@34.159.189.149 mkdir -p /tmp/HTML_test
+[8mha:////4Dy+RWy4hTdaqzRsJjcawx9t6T5lWY7Olbk33L0fvb6UAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKBBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnf5jrshg+bK3WtvgAAAA==[0m[Pipeline] sh
++ scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp -r ./HTML_test/Jenkinsfile ./HTML_test/images ./HTML_test/index.html ubuntu@34.159.189.149:/tmp/HTML_test/
+[8mha:////4CEc5AX2oVM81RGoYcA8Z7bpEfuPbJd4gXsmdGKNlzMCAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKBBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnf5jrshg9cvTTivgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@34.159.189.149 sudo rsync -av /tmp/HTML_test/ /var/www/html/
+sending incremental file list
+./
+Jenkinsfile
+index.html
+images/
+images/Августовский канал.jpg
+images/Беларусь.jpg
+images/Брестская крепость.jpg
+images/Буйничское поле.jpg
+images/Гомельский дворцово-парковый ансамбль.jpg
+images/Дворец Потемкина.jpg
+images/Дворец Пусловских.jpg
+images/Дудудки.jpg
+images/Коложская церковь.jpg
+images/Могилёвская ратуша.jpg
+images/Мозырский замок.jpg
+images/Мозырьский замок.jpg
+images/Музей старообрядчества.jpg
+images/Несвижский замок.jpg
+images/Старый замок.jpg
+images/Шагал.jpg
+images/беловежская пуща.jpg
+images/браславские озера.jpg
+images/софийский собор.jpg
+images/хатынь.jpg
+
+sent 6,528,711 bytes  received 449 bytes  13,058,320.00 bytes/sec
+total size is 6,525,196  speedup is 1.00
+[8mha:////4NcRAuFmjzHwJrzSuu0CfPlHFEejuOPYHzMQABfN3XJJAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRRWgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+QVnvcx1q/wEdjC/7vgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@34.159.189.149 rm -rf /tmp/HTML_test
+[8mha:////4CUn/SMJon3UJ5QjtM0c3G0weDcA66VW1GjqqTlm5hDRAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCtIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QXnY56pr/wHe3wLQvgAAAA==[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@34.40.21.204 mkdir -p /tmp/HTML_test
+[8mha:////4LtAVXR6zNUAf/LsdPsXUfg51I8ZkqBHuZzbccLwUcOsAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCqBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnb5tofhg+f7hnJvgAAAA==[0m[Pipeline] sh
++ scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp -r ./HTML_test/Jenkinsfile ./HTML_test/images ./HTML_test/index.html ubuntu@34.40.21.204:/tmp/HTML_test/
+[8mha:////4BEEnpDXqYVYXDezjhD6kdpZe7vcUllVGrn7+1IqGi0TAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiChASSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdNtf+MHwAUPKBTr4AAAA=[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@34.40.21.204 sudo rsync -av /tmp/HTML_test/ /var/www/html/
+sending incremental file list
+./
+Jenkinsfile
+index.html
+images/
+images/Августовский канал.jpg
+images/Беларусь.jpg
+images/Брестская крепость.jpg
+images/Буйничское поле.jpg
+images/Гомельский дворцово-парковый ансамбль.jpg
+images/Дворец Потемкина.jpg
+images/Дворец Пусловских.jpg
+images/Дудудки.jpg
+images/Коложская церковь.jpg
+images/Могилёвская ратуша.jpg
+images/Мозырский замок.jpg
+images/Мозырьский замок.jpg
+images/Музей старообрядчества.jpg
+images/Несвижский замок.jpg
+images/Старый замок.jpg
+images/Шагал.jpg
+images/беловежская пуща.jpg
+images/браславские озера.jpg
+images/софийский собор.jpg
+images/хатынь.jpg
+
+sent 6,528,704 bytes  received 449 bytes  13,058,306.00 bytes/sec
+total size is 6,525,196  speedup is 1.00
+[8mha:////4A8pcOXW1n8sZeZbcXElmIr/SKlbv+8+1Lfr9+KBbsaFAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCpAQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdNtf+MHwAEcOaV74AAAA=[0m[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@34.40.21.204 rm -rf /tmp/HTML_test
+[8mha:////4AMBt0j/5AXe0rKpaDaD0kb3cPC1viCOVmSpuUnLrAmSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw8RZ1FmvgAAAA==[0m[Pipeline] }
+[8mha:////4NPQQSvTlpcZ1K9H/UzxTzew/LilExQQZ89EpUnA4wOiAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAedrn22w8ihAravgAAAA==[0m[Pipeline] // withCredentials
+[8mha:////4GsmzwOirW7sx4hMXB04dK3592lxGkQcGTerRX4wfGXCAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISSEUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpGCKU+22u3eEDaX9ZPL4AAAA=[0m[Pipeline] }
+[8mha:////4O7pvJnR1qQLj6CCRQh0pRLrgwKUeXTsfn8DW9nwb5bTAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgAQSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryv821O3wAWpwCgL4AAAA=[0m[Pipeline] // script
+[8mha:////4KkY0/O0ajC44Cj886hotnr00wRIWa94BKs5j0tEuYWLAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpIqVAVLRWGl5gYmOcWHeOfSGpeBFf4w9YRKJii9XONvN6wzZFOFG0ojc4OEydE8FPNi8xUxxunmbR01V0hIm8Ea2ZW9LmvGJLbGBNUcJGws5g5yk5tAx72auHqrxCW1045u8ooXR6hCcUMptZRf7CEuFwn3Qi/Hn+CmAJgaFs6lx18wFzsbgNvgAAAA==[0m[Pipeline] }
+[8mha:////4BSOSBSH8mzUPGNPxo8e+4lFEtOOFLR6j+B+4FpMR7UcAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGLT8ClQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAedrm2+w9AUuOxvgAAAA==[0m[Pipeline] // stage
+[8mha:////4HKleF+/YWDsq8/6xfx+5SPqOZy/5P1G2Y6MCu12Cli+AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUXWBATF2jLpwgNCEkjf4vSUo6cSKuxh0IVGLCg2Vbst7zBVXwcCSvmVU4GAy9YaObdE4skR8ujhKzdGY9YSCnWKdSR1K1S+0oKlhUlLDisFbYOwoGdYQNt+IuaidQ16fo83bgUBp5gwcUPJOj8PFbZg/b6yQD4Y/zFwDzGKFsmmz73edZvQFDe+tjwgAAAA==[0m[Pipeline] stage
+[8mha:////4HtM5hDLngINA/SsQYPlbOwx0/oy5JV4RbwtcM95V8hHAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0owNiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsPhRixbsIAAAA=[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4F8fibTOtoXVDBH5Weo4K3unSWrIHbpoyZvanZ4e6+LqAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSxhnHypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzD5B3baf2vs3IKq2br4AAAA=[0m[Pipeline] sh
++ pwd
+/var/lib/jenkins/workspace/website-update
+[8mha:////4GWmGYfK+VBT8ePbImAtP3RY1OMHhbUrUOintMNOaQkQAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSZhzHypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzD5B3baf2vs3YZutd74AAAA=[0m[Pipeline] sh
++ docker stop nginx-container
+nginx-container
+[8mha:////4CBo2Z2kLHB7EjCKPM6OUcNVNbY2ZJttWHGLcsSCwOiCAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKhCxKiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNknKOs612HvPxVnM62+AAAA[0m[Pipeline] sh
++ docker rm nginx-container
+nginx-container
+[8mha:////4Pheq5ixzaU0UDZeNwDCJteNQWJOYos+e25O2Oq9TH2yAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRVZAQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+QVnXuQ57/wFUVii0vgAAAA==[0m[Pipeline] deleteDir
+[8mha:////4BRRfMiUhf8YpbNKVZuU82jGUIGf7bMfOlCvyVH2z9qaAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYikSYuoaZeEEIQkhbfR/SVLaiRNxNe5AoBITHizbkvWeL6higCMFyzqDvcOoHBv8aHNiE4X+4mliHZ2ZIozkDRNmEqRNu1RBycCiooQVh7VB5Sk6tAk2vJN3WXuJtj6lkLcDh9LpGzyg4JmcZEjfMgfYXkcdCX+cvwCYhwRl02Tb7z7P6g0fJroJwgAAAA==[0m[Pipeline] script
+[8mha:////4NkPavkgaZghB+J5lJKkkXsT10tr6wt6lxZcyY+bkPVpAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUggUJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfACJxiXBwgAAAA==[0m[Pipeline] {
+[8mha:////4G2l5UrN9UqbZdxCUwZJEsIjJUHehR16k/fcrDEqd3rMAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSQIGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDud5/avgGPSihQvgAAAA==[0m[Pipeline] }
+[8mha:////4IaKv/IXTyI52cQ+0sI234IKdd3nF7h8u9ieBxu85rywAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEhIaq0lhteYGJjnFh3xnZIKl7E1/gDgUhUbLHa2WaeL1imCEeOFltDnaPUOAy+t9PCgWN38Txgy2dsmBJ7g9IMkrWpZ5ScDcwpSlgIWBlqPCdHNsNatOquKq/IVqccp+8goHT6Bg8oxGTOKuYvjBE2114npp/nrwDGEDKU+92ntm+8qXPsvgAAAA==[0m[Pipeline] // script
+[8mha:////4GBmsNFBhagW5Imo1A5BAlwepgbBpIBdWU578hfr/n99AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMLpCBKiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOVhn6uuP1IzFZ2+AAAA[0m[Pipeline] }
+[8mha:////4MImQW3fm29B2gROqq/RE03PUAVjJGuyXJvdpVs8jl5aAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMLpCBKiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOWhzlXvP2HQTiG+AAAA[0m[Pipeline] // stage
+[8mha:////4F8GSqIqkELk5W6wfGAU/X3Bm5O2KSZquoE+DSFTNhf6AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJRukiIitZKwwtMbIwT686xLyQVL+Jr/AGLSFRssdrZZl5v2KYIJ4pW9AYHh6lzIvjJ5iVmisPN0yx6uoqOMJE3ojVzS9qcV2yJDawpSthI2BnsPCWHlmEve/VQlVdoqwvH/B0llE6P8IRCZjOryF9YIhzuk06EP89fASwhMJRNk6uuP5FQJhi+AAAA[0m[Pipeline] }
+[8mha:////4P3rChEjKPYDusigVTCutX86b1rEHNw170R55KYMV9CsAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICHQilorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYhQrk/5NptP6KzfaS+AAAA[0m[Pipeline] // withEnv
+[8mha:////4Gv2gr8Kzo6C4FiMtKBjnAb/5JczTgU42k/pEi2hyn0iAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKhoEGIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfL8VZLsP6KkWPr0AAAA=[0m[Pipeline] }
+[8mha:////4OWEzjjQ8lXQmRPr0WGoqxPRoy/qWBmPFQM1D/WEMYaZAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRokKIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfL8VZLsP+xUSnb0AAAA=[0m[Pipeline] // node
+[8mha:////4PnMQPWE5FhcMJZEfnVhKMxqjLfAIpDqLWVRRI/FIf92AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkbMY4uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwAvV+1rb0AAAA=[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

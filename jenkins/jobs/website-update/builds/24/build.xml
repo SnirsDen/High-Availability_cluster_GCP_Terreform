@@ -1,0 +1,433 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<flow-build plugin="workflow-job@1546.v62a_c59c112dd">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.triggers.SCMTrigger_-SCMTriggerCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.triggers.SCMTrigger_-BuildAction/>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.33-484.v2fcd689980d1">
+      <queuingDurationMillis>5536</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>0</buildableDurationMillis>
+      <waitingDurationMillis>5534</waitingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@752.vdddedf804e72">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2265.v140e610fe9d5">
+      <stagesUUID>760d613d-de80-453b-8bd5-9e1229e8dc04</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2265.v140e610fe9d5">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Клонирование репозитория</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">git clone https://github.com/SnirsDen/HTML_test.git</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Сборка и запуск Docker контейнера</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">sh &apos;docker run -d -p 80:80 -v ./HTML_test:/usr/share/nginx/html --name nginx-container nginx:latest&apos;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Проверка</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">curl http://localhost</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Получение списка IP-адресов</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">withCredentials([file(credentialsId: &apos;gcp-service-account-key&apos;, variable: &apos;GC_KEY&apos;)]) {
+                    sh &quot;&quot;&quot;
+                        gcloud auth activate-service-account --key-file=${GC_KEY}
+                        gcloud config set project my-diplom-472008 --quiet
+                    &quot;&quot;&quot;
+                        // Получаем список внешних IP-адресов для машин с именами prod* и dev*
+                        def remoteIPs = sh(script: &apos;&apos;&apos;
+                            gcloud compute instances list --filter=&quot;name~&apos;^prod.*&apos; OR name~&apos;^dev.*&apos;&quot; --format=&quot;value(networkInterfaces[0].accessConfigs[0].natIP)&quot; --quiet
+                    &apos;&apos;&apos;, returnStdout: true).trim()
+        
+                        // Разделяем результат на отдельные IP-адреса
+                        env.REMOTE_IPS = remoteIPs.split(&quot;\\s+&quot;)
+                        println &quot;IP Addresses: ${env.REMOTE_IPS}&quot;
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Копирование файлов на удаленные сервера</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">withCredentials([file(credentialsId: &apos;gcp-service-account-key&apos;, variable: &apos;GC_KEY&apos;)]) {
+                    sh &quot;&quot;&quot;
+                        gcloud auth activate-service-account --key-file=${GC_KEY}
+                        gcloud config set project my-diplom-472008 --quiet
+                    &quot;&quot;&quot;
+                        // Получение списка IP-адресов для машин с именами prod* и dev*
+                        def remoteIPs = sh(script: &apos;&apos;&apos;
+                           gcloud compute instances list --filter=&quot;name~&apos;^prod.*&apos; OR name~&apos;^dev.*&apos;&quot; --format=&quot;value(networkInterfaces[0].accessConfigs[0].natIP)&quot; --quiet
+                        &apos;&apos;&apos;, returnStdout: true).trim()
+            
+                     // Разделяем результат по пробельным символам и обрабатываем каждый IP
+                        remoteIPs.split(&apos;\\s+&apos;).each { ip -&gt;
+                            // Создаем временную директорию на удаленном сервере
+                            sh &quot;ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@${ip} &apos;mkdir -p /tmp/HTML_test&apos;&quot;                
+                            // Копируем файлы на удаленный сервер
+                            sh &quot;scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp -r ./HTML_test/* ubuntu@${ip}:/tmp/HTML_test/&quot;                
+                            // Синхронизируем файлы в веб-директорию (с сохранением прав)
+                            sh &quot;ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@${ip} &apos;sudo rsync -av /tmp/HTML_test/ /var/www/html/&apos;&quot;               
+                            // Удаляем временную директорию
+                            sh &quot;ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@${ip} &apos;rm -rf /tmp/HTML_test&apos;&quot;
+                        }
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>760d613d-de80-453b-8bd5-9e1229e8dc04</uuid>
+          </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>always</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>sh</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>script</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">pwd</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>sh</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>script</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">docker stop nginx-container || true</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>sh</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>script</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">docker rm nginx-container || true</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>deleteDir</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map"/>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <name>script</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>scriptBlock</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">def message = &quot;Сборка завершена. Результат: ${currentBuild.result}&quot;
+            def chatId = &quot;-1002678517458&quot; // Укажите ID чата, куда хотите отправить сообщение
+            def token = &quot;8270244334:AAE69VV835hnA_6delwctDo8HSe9NQtSK9Q&quot; // Ваш токен бота
+            sh &quot;curl -s -X POST https://api.telegram.org/bot${token}/sendMessage -d chat_id=${chatId} -d text=&apos;${message}&apos;&quot;</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
+          <agent>
+            <agentType>
+              <key>any</key>
+            </agentType>
+          </agent>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.33-484.v2fcd689980d1">
+      <queuingDurationMillis>10</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>5</buildableDurationMillis>
+      <waitingDurationMillis>2</waitingDurationMillis>
+      <executingDurationMillis>4825</executingDurationMillis>
+      <workUnitCount>1</workUnitCount>
+    </jenkins.metrics.impl.SubTaskTimeInQueueAction>
+  </actions>
+  <queueId>37</queueId>
+  <timestamp>1757802128019</timestamp>
+  <startTime>1757802128036</startTime>
+  <result>FAILURE</result>
+  <duration>16173</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>#!/usr/bin/env groovy
+
+pipeline {
+    agent any
+
+    stages {
+        stage(&apos;Клонирование репозитория&apos;) {
+            steps {
+                // Клонирование вашего репозитория
+                sh &apos;git clone https://github.com/SnirsDen/HTML_test.git&apos;
+            }
+        }
+
+        stage(&apos;Сборка и запуск Docker контейнера&apos;) {
+            steps {
+                script {
+                // Запуск контейнера с монтированием директории
+                sh &apos;docker run -d -p 80:80 -v ./HTML_test:/usr/share/nginx/html --name nginx-container nginx:latest&apos;
+                }
+            }
+        }
+
+        stage(&apos;Проверка&apos;) {
+            steps {
+                // Выполнение curl для проверки работоспособности
+                sh &apos;curl http://localhost&apos;
+            }
+        }
+        
+    
+        stage(&apos;Получение списка IP-адресов&apos;) {
+            steps {
+                script {
+                    withCredentials([file(credentialsId: &apos;gcp-service-account-key&apos;, variable: &apos;GC_KEY&apos;)]) {
+                    sh &quot;&quot;&quot;
+                        gcloud auth activate-service-account --key-file=${GC_KEY}
+                        gcloud config set project my-diplom-472008 --quiet
+                    &quot;&quot;&quot;
+                        // Получаем список внешних IP-адресов для машин с именами prod* и dev*
+                        def remoteIPs = sh(script: &apos;&apos;&apos;
+                            gcloud compute instances list --filter=&quot;name~&apos;^prod.*&apos; OR name~&apos;^dev.*&apos;&quot; --format=&quot;value(networkInterfaces[0].accessConfigs[0].natIP)&quot; --quiet
+                    &apos;&apos;&apos;, returnStdout: true).trim()
+        
+                        // Разделяем результат на отдельные IP-адреса
+                        env.REMOTE_IPS = remoteIPs.split(&quot;\\s+&quot;)
+                        println &quot;IP Addresses: ${env.REMOTE_IPS}&quot;
+                    }
+                }   
+            }
+        }
+
+        stage(&apos;Копирование файлов на удаленные сервера&apos;) {
+            steps {
+                script {
+                    withCredentials([file(credentialsId: &apos;gcp-service-account-key&apos;, variable: &apos;GC_KEY&apos;)]) {
+                    sh &quot;&quot;&quot;
+                        gcloud auth activate-service-account --key-file=${GC_KEY}
+                        gcloud config set project my-diplom-472008 --quiet
+                    &quot;&quot;&quot;
+                        // Получение списка IP-адресов для машин с именами prod* и dev*
+                        def remoteIPs = sh(script: &apos;&apos;&apos;
+                           gcloud compute instances list --filter=&quot;name~&apos;^prod.*&apos; OR name~&apos;^dev.*&apos;&quot; --format=&quot;value(networkInterfaces[0].accessConfigs[0].natIP)&quot; --quiet
+                        &apos;&apos;&apos;, returnStdout: true).trim()
+            
+                     // Разделяем результат по пробельным символам и обрабатываем каждый IP
+                        remoteIPs.split(&apos;\\s+&apos;).each { ip -&gt;
+                            // Создаем временную директорию на удаленном сервере
+                            sh &quot;ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@${ip} &apos;mkdir -p /tmp/HTML_test&apos;&quot;                
+                            // Копируем файлы на удаленный сервер
+                            sh &quot;scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp -r ./HTML_test/* ubuntu@${ip}:/tmp/HTML_test/&quot;                
+                            // Синхронизируем файлы в веб-директорию (с сохранением прав)
+                            sh &quot;ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@${ip} &apos;sudo rsync -av /tmp/HTML_test/ /var/www/html/&apos;&quot;               
+                            // Удаляем временную директорию
+                            sh &quot;ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/terraform_gcp ubuntu@${ip} &apos;rm -rf /tmp/HTML_test&apos;&quot;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            sh &apos;pwd&apos;
+            // Остановка и удаление контейнера после завершения пайплайна
+            sh &apos;docker stop nginx-container || true&apos;
+            sh &apos;docker rm nginx-container || true&apos;
+            deleteDir()
+            script {
+            def message = &quot;Сборка завершена. Результат: ${currentBuild.result}&quot;
+            def chatId = &quot;-1002678517458&quot; // Укажите ID чата, куда хотите отправить сообщение
+            def token = &quot;8270244334:AAE69VV835hnA_6delwctDo8HSe9NQtSK9Q&quot; // Ваш токен бота
+            sh &quot;curl -s -X POST https://api.telegram.org/bot${token}/sendMessage -d chat_id=${chatId} -d text=&apos;${message}&apos;&quot;
+        }
+        }
+    }
+}
+</script>
+    <loadedScripts class="linked-hash-map"/>
+    <durabilityHint>PERFORMANCE_OPTIMIZED</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>8087630</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>7695793793</long>
+      </entry>
+      <entry>
+        <string>runQueue</string>
+        <long>709088252</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>5004690525</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>1749140223</long>
+      </entry>
+    </timings>
+    <internalCalls class="sorted-set">
+      <string>hudson.Functions.printThrowable</string>
+      <string>hudson.model.Result.fromString</string>
+      <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
+      <string>org.jenkinsci.plugins.workflow.steps.MissingContextVariableException.type</string>
+    </internalCalls>
+    <sandbox>true</sandbox>
+    <iota>17</iota>
+    <head>1:17</head>
+    <done>true</done>
+    <resumeBlocked>true</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
